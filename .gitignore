@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/build
+
+# misc
+.DS_Store
+.env
+.env.*          # e.g., .env.local, .env.development
+.vscode
+.idea
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+
+# Tailwind JIT cache
+/.tailwind
+
+# Vite
+/.vite
+.vite-cache
+
+# Local storage by tools like jest
+jest-cache

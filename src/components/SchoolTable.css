@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #4a6fdc;
+  --primary-light: #e8eeff;
+  --secondary-color: #f8f9fa;
+  --border-color: #e6e6e6;
+  --text-color: #333;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  margin-left: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 27rem;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.data-container {
+  width: 100%;
+  padding: 2%;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1.6px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.school-name-column {
+  min-width: 250px;
+}
+
+.activity-column {
+  min-width: 200px;
+}
+
+.fund-approved-column {
+  min-width: 100px;
+}
+
+.slno-column {
+  min-width: 60px;
+}
+
+/* Increased width for specific columns */
+th:nth-of-type(3), /* EBRC */
+td:nth-of-type(3) {
+  min-width: 200px;
+}
+
+.table-row{
+  height: 20px;
+}
+
+th:nth-of-type(4), /* UDISE */
+td:nth-of-type(4) {
+  min-width: 150px;
+}
+
+/* PAB, Fund Approved, Civil Cost, and monthly columns */
+th:nth-of-type(7), /* PAB */
+td:nth-of-type(7),
+th:nth-of-type(8), /* Fund Approved */
+td:nth-of-type(8),
+th:nth-of-type(9), /* Civil Cost */
+td:nth-of-type(9) {
+  min-width: 200px;
+}
+
+/* April-March columns */
+th:nth-of-type(10), td:nth-of-type(10),
+th:nth-of-type(11), td:nth-of-type(11),
+th:nth-of-type(12), td:nth-of-type(12),
+th:nth-of-type(13), td:nth-of-type(13),
+th:nth-of-type(14), td:nth-of-type(14),
+th:nth-of-type(15), td:nth-of-type(15),
+th:nth-of-type(16), td:nth-of-type(16),
+th:nth-of-type(17), td:nth-of-type(17),
+th:nth-of-type(18), td:nth-of-type(18),
+th:nth-of-type(19), td:nth-of-type(19),
+th:nth-of-type(20), td:nth-of-type(20),
+th:nth-of-type(21), td:nth-of-type(21) {
+  min-width: 170px;
+}
+
+/* Total Expenditure, Balance, Remarks */
+th:nth-of-type(22), /* Total Expenditure */
+td:nth-of-type(22),
+th:nth-of-type(23), /* Balance */
+td:nth-of-type(23),
+th:nth-of-type(24), /* Remarks */
+td:nth-of-type(24) {
+  min-width: 220px;
+}
+
+.district-column {
+  min-width: 180px;
+}
+
+td input,
+td select {
+  width: 100%;
+  padding: 3px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: var(--text-color);
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+td input::placeholder {
+  color: #999;
+}
+
+td input:focus,
+td select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.non-editable {
+  height: 40px; /* Match the height of input fields */
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.calculated-field {
+  font-weight: 500;
+  cursor: default;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+/* Hide number input arrows */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.section-title {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .logo, .logo-text {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .logo-text,
+  .logo {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+}
